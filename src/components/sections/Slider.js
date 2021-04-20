@@ -14,9 +14,13 @@ const Slider = () => {
 
     let slideCount = 0;
     function autoSlide() {
+        let slideShow = document.querySelector(".slide-show");
+        let slideImage = (slideShow.style.backgroundImage = slides[slideCount]);
+        slideCount++;
+
         document.querySelector(".slide-show").style.backgroundImage =
             slides[slideCount];
-        slideCount++;
+
         if (slideCount >= slides.length) {
             slideCount = 0;
         }
