@@ -1,7 +1,19 @@
 import Slider from "../sections/Slider";
 import Stats from "../sections/Stats";
+import homeInventory from "../utilities/homeInventory";
+import Inven from "../sections/Inven";
 
 const Home = () => {
+    const homePetComponents = homeInventory.map((pet) => (
+        <Inven
+            key={pet.id}
+            img={pet.img}
+            name={pet.name}
+            age={pet.age}
+            gender={pet.gender}
+            breed={pet.breed}
+        />
+    ));
     return (
         <>
             <main>
@@ -20,7 +32,9 @@ const Home = () => {
                         </div>
                         <hr />
 
-                        <div className="inventory homeInventory"></div>
+                        <div className="inventory homeInventory">
+                            {homePetComponents}
+                        </div>
                     </div>
                 </section>
             </main>

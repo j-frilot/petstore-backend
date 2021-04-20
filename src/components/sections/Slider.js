@@ -1,4 +1,28 @@
 const Slider = () => {
+    //SLIDE SHOW
+
+    window.addEventListener("DOMContentLoaded", function () {
+        let firstSlide = document.querySelector(".first-slide");
+        firstSlide.style.display = "flex";
+    });
+
+    let slides = [
+        "url('images/home/slide-1.jpg')",
+        "url('images/home/slide-2.jpg')",
+        "url('images/home/slide-3.jpg')"
+    ];
+
+    let slideCount = 0;
+    function autoSlide() {
+        document.querySelector(".slide-show").style.backgroundImage =
+            slides[slideCount];
+        slideCount++;
+        if (slideCount >= slides.length) {
+            slideCount = 0;
+        }
+    }
+    setInterval(autoSlide, 3000);
+
     return (
         <>
             <section className="slide-show">

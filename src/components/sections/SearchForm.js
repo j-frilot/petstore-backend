@@ -1,6 +1,6 @@
 const SearchForm = () => {
     return (
-        <section class="find">
+        <section className="find">
             <div>
                 <h3>Are you interested in adoption?</h3>
                 <p>
@@ -14,47 +14,47 @@ const SearchForm = () => {
                 <img
                     src="images/home/paw-1.png"
                     alt="paw logo"
-                    class="paw-logo-lg"
+                    className="paw-logo-lg"
                 />
                 <h2>Find a pet just for you!</h2>
             </div>
 
-            <form class="search-form">
-                <div class="gender-group">
+            <form className="search-form">
+                <div className="gender-group">
                     <h3>Gender</h3>
 
                     <input
                         type="radio"
                         name="gender"
-                        class="gender"
+                        className="gender"
                         id="male"
                         value="male"
                     />
-                    <label for="male">Male</label>
+                    <label htmlFor="male">Male</label>
 
                     <input
                         type="radio"
                         name="gender"
-                        class="gender"
+                        className="gender"
                         id="female"
                         value="female"
                     />
-                    <label for="female">Female</label>
+                    <label htmlFor="female">Female</label>
                 </div>
 
-                <div class="color-group">
+                <div className="color-group">
                     <h3>Color</h3>
                     <input type="radio" name="color" id="black" value="black" />
-                    <label for="black">Black</label>
+                    <label htmlFor="black">Black</label>
 
                     <input type="radio" name="color" id="brown" value="brown" />
-                    <label for="brown">Brown</label>
+                    <label htmlFor="brown">Brown</label>
 
                     <input type="radio" name="color" id="white" value="white" />
-                    <label for="white">White</label>
+                    <label htmlFor="white">White</label>
                 </div>
 
-                <button type="submit" class="btn form-submit">
+                <button type="submit" className="btn form-submit">
                     {" "}
                     Find{" "}
                 </button>

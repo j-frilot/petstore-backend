@@ -1,313 +1,312 @@
 // PRODUCTS
 //home products
-let homeProducts = [
-    {
-        id: 7,
-        name: "Jack",
-        age: "4 years",
-        breed: "Shar-pei",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "Black",
-        img: "images/inventory/dog_7.jpeg"
-    },
-    {
-        id: 8,
-        name: "Ellie",
-        age: "1 years",
-        breed: "Terrier Mix",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "black",
-        img: "images/inventory/dog_8.jpeg"
-    },
-    {
-        id: 9,
-        name: "Thor",
-        age: "6 years",
-        breed: "Sheppard",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "brown",
-        img: "images/inventory/dog_9.jpeg"
-    }
-];
+// let homeProducts = [
+//     {
+//         id: 7,
+//         name: "Jack",
+//         age: "4 years",
+//         breed: "Shar-pei",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "Black",
+//         img: "images/inventory/dog_7.jpeg"
+//     },
+//     {
+//         id: 8,
+//         name: "Ellie",
+//         age: "1 years",
+//         breed: "Terrier Mix",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "female",
+//         color: "black",
+//         img: "images/inventory/dog_8.jpeg"
+//     },
+//     {
+//         id: 9,
+//         name: "Thor",
+//         age: "6 years",
+//         breed: "Sheppard",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "brown",
+//         img: "images/inventory/dog_9.jpeg"
+//     }
+// ];
 
 // home inventory map
-window.addEventListener("DOMContentLoaded", () => {
-    let homeInventory = document.querySelector(".homeInventory");
+// window.addEventListener("DOMContentLoaded", () => {
+//     let homeInventory = document.querySelector(".homeInventory");
 
-    let showHomeProducts = homeProducts.map((homeProduct) => {
-        return `<div class="card">
-                    <div class="card-img">
-                        <img src=${homeProduct.img} alt="product-1" class="img product-pic">
-                    </div>
+//     let showHomeProducts = homeProducts.map((homeProduct) => {
+//         return `<div class="card">
+//                     <div class="card-img">
+//                         <img src=${homeProduct.img} alt="product-1" class="img product-pic">
+//                     </div>
 
-                    <div class="card-name">
-                            <h1>${homeProduct.name}</h1>
-                        </div>
-                    <div class="info">
-                        
+//                     <div class="card-name">
+//                             <h1>${homeProduct.name}</h1>
+//                         </div>
+//                     <div class="info">
 
-                        <div class="card-age">
-                            <h3>${homeProduct.age}</h3>
-                        </div>
+//                         <div class="card-age">
+//                             <h3>${homeProduct.age}</h3>
+//                         </div>
 
-                        <div class="card-gender">
-                            <h3>${homeProduct.gender}</h3>
-                        </div>
+//                         <div class="card-gender">
+//                             <h3>${homeProduct.gender}</h3>
+//                         </div>
 
-                        <div class="card-breed">
-                            <h3>${homeProduct.breed}</h3>
-                        </div>
+//                         <div class="card-breed">
+//                             <h3>${homeProduct.breed}</h3>
+//                         </div>
 
-                        <a href="#" class="card-dog-link"><h3>More Info</h3></a>
-                    </div>
-                </div>`;
-    });
-    showHomeProducts = showHomeProducts.join("");
-    homeInventory.innerHTML = showHomeProducts;
-});
+//                         <a href="#" class="card-dog-link"><h3>More Info</h3></a>
+//                     </div>
+//                 </div>`;
+//     });
+//     showHomeProducts = showHomeProducts.join("");
+//     homeInventory.innerHTML = showHomeProducts;
+// });
 
 //all products
-let allProducts = [
-    {
-        id: 1,
-        name: "Max",
-        age: "2 years",
-        breed: "Pit Bull",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "Brown",
-        img: "images/inventory/dog_1.jpg"
-    },
-    {
-        id: 2,
-        name: "Bella",
-        age: "Unknown",
-        breed: "Chihuahua",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "tan",
-        img: "images/inventory/dog_2.jpeg"
-    },
-    {
-        id: 3,
-        name: "Buddy",
-        age: "4 years",
-        breed: "Hound",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "Black, White",
-        img: "images/inventory/dog_3.jpeg"
-    },
-    {
-        id: 4,
-        name: "Daisy",
-        age: "2 years",
-        breed: "Labrador",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "Brown",
-        img: "images/inventory/dog_4.jpeg"
-    },
-    {
-        id: 5,
-        name: "Charlie",
-        age: "1 years",
-        breed: "Pitbull, Boxer",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "brown",
-        img: "images/inventory/dog_5.jpg"
-    },
-    {
-        id: 6,
-        name: "Coco",
-        age: "5 years",
-        breed: "Poodle",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "white",
-        img: "images/inventory/dog_6.jpg"
-    },
-    {
-        id: 7,
-        name: "Jack",
-        age: "4 years",
-        breed: "Shar-pei",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "Black",
-        img: "images/inventory/dog_7.jpeg"
-    },
-    {
-        id: 8,
-        name: "Ellie",
-        age: "1 years",
-        breed: "Terrier Mix",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "black",
-        img: "images/inventory/dog_8.jpeg"
-    },
-    {
-        id: 9,
-        name: "Thor",
-        age: "6 years",
-        breed: "Sheppard",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "brown",
-        img: "images/inventory/dog_9.jpeg"
-    },
-    {
-        id: 1,
-        name: "Max",
-        age: "2 years",
-        breed: "Pit Bull",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "Brown",
-        img: "images/inventory/dog_1.jpg"
-    },
-    {
-        id: 2,
-        name: "Bella",
-        age: "Unknown",
-        breed: "Chihuahua",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "tan",
-        img: "images/inventory/dog_2.jpeg"
-    },
-    {
-        id: 3,
-        name: "Buddy",
-        age: "4 years",
-        breed: "Hound",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "Black, White",
-        img: "images/inventory/dog_3.jpeg"
-    },
-    {
-        id: 4,
-        name: "Daisy",
-        age: "2 years",
-        breed: "Labrador",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "Brown",
-        img: "images/inventory/dog_4.jpeg"
-    },
-    {
-        id: 5,
-        name: "Charlie",
-        age: "1 years",
-        breed: "Pitbull, Boxer",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "brown",
-        img: "images/inventory/dog_5.jpg"
-    },
-    {
-        id: 6,
-        name: "Coco",
-        age: "5 years",
-        breed: "Poodle",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "white",
-        img: "images/inventory/dog_6.jpg"
-    },
-    {
-        id: 7,
-        name: "Jack",
-        age: "4 years",
-        breed: "Shar-pei",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "Black",
-        img: "images/inventory/dog_7.jpeg"
-    },
-    {
-        id: 8,
-        name: "Ellie",
-        age: "1 years",
-        breed: "Terrier Mix",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "black",
-        img: "images/inventory/dog_8.jpeg"
-    },
-    {
-        id: 9,
-        name: "Thor",
-        age: "6 years",
-        breed: "Sheppard",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "brown",
-        img: "images/inventory/dog_9.jpeg"
-    }
-];
+// let allProducts = [
+//     {
+//         id: 1,
+//         name: "Max",
+//         age: "2 years",
+//         breed: "Pit Bull",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "Brown",
+//         img: "images/inventory/dog_1.jpg"
+//     },
+//     {
+//         id: 2,
+//         name: "Bella",
+//         age: "Unknown",
+//         breed: "Chihuahua",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "female",
+//         color: "tan",
+//         img: "images/inventory/dog_2.jpeg"
+//     },
+//     {
+//         id: 3,
+//         name: "Buddy",
+//         age: "4 years",
+//         breed: "Hound",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "Black, White",
+//         img: "images/inventory/dog_3.jpeg"
+//     },
+//     {
+//         id: 4,
+//         name: "Daisy",
+//         age: "2 years",
+//         breed: "Labrador",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "female",
+//         color: "Brown",
+//         img: "images/inventory/dog_4.jpeg"
+//     },
+//     {
+//         id: 5,
+//         name: "Charlie",
+//         age: "1 years",
+//         breed: "Pitbull, Boxer",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "brown",
+//         img: "images/inventory/dog_5.jpg"
+//     },
+//     {
+//         id: 6,
+//         name: "Coco",
+//         age: "5 years",
+//         breed: "Poodle",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "female",
+//         color: "white",
+//         img: "images/inventory/dog_6.jpg"
+//     },
+//     {
+//         id: 7,
+//         name: "Jack",
+//         age: "4 years",
+//         breed: "Shar-pei",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "Black",
+//         img: "images/inventory/dog_7.jpeg"
+//     },
+//     {
+//         id: 8,
+//         name: "Ellie",
+//         age: "1 years",
+//         breed: "Terrier Mix",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "female",
+//         color: "black",
+//         img: "images/inventory/dog_8.jpeg"
+//     },
+//     {
+//         id: 9,
+//         name: "Thor",
+//         age: "6 years",
+//         breed: "Sheppard",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "brown",
+//         img: "images/inventory/dog_9.jpeg"
+//     },
+//     {
+//         id: 1,
+//         name: "Max",
+//         age: "2 years",
+//         breed: "Pit Bull",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "Brown",
+//         img: "images/inventory/dog_1.jpg"
+//     },
+//     {
+//         id: 2,
+//         name: "Bella",
+//         age: "Unknown",
+//         breed: "Chihuahua",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "female",
+//         color: "tan",
+//         img: "images/inventory/dog_2.jpeg"
+//     },
+//     {
+//         id: 3,
+//         name: "Buddy",
+//         age: "4 years",
+//         breed: "Hound",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "Black, White",
+//         img: "images/inventory/dog_3.jpeg"
+//     },
+//     {
+//         id: 4,
+//         name: "Daisy",
+//         age: "2 years",
+//         breed: "Labrador",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "female",
+//         color: "Brown",
+//         img: "images/inventory/dog_4.jpeg"
+//     },
+//     {
+//         id: 5,
+//         name: "Charlie",
+//         age: "1 years",
+//         breed: "Pitbull, Boxer",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "brown",
+//         img: "images/inventory/dog_5.jpg"
+//     },
+//     {
+//         id: 6,
+//         name: "Coco",
+//         age: "5 years",
+//         breed: "Poodle",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "female",
+//         color: "white",
+//         img: "images/inventory/dog_6.jpg"
+//     },
+//     {
+//         id: 7,
+//         name: "Jack",
+//         age: "4 years",
+//         breed: "Shar-pei",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "Black",
+//         img: "images/inventory/dog_7.jpeg"
+//     },
+//     {
+//         id: 8,
+//         name: "Ellie",
+//         age: "1 years",
+//         breed: "Terrier Mix",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "female",
+//         color: "black",
+//         img: "images/inventory/dog_8.jpeg"
+//     },
+//     {
+//         id: 9,
+//         name: "Thor",
+//         age: "6 years",
+//         breed: "Sheppard",
+//         desc:
+//             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+//         gender: "male",
+//         color: "brown",
+//         img: "images/inventory/dog_9.jpeg"
+//     }
+// ];
 
-// full inventory map
-window.addEventListener("DOMContentLoaded", () => {
-    const fullInventory = document.querySelector(".full-inventory");
+// // full inventory map
+// window.addEventListener("DOMContentLoaded", () => {
+//     const fullInventory = document.querySelector(".full-inventory");
 
-    let showAllProducts = allProducts.map((eachProduct) => {
-        return `<div class="card">
-                    <div class="card-img">
-                        <img src=${eachProduct.img} alt="product-1" class="img product-pic">
-                    </div>
+//     let showAllProducts = allProducts.map((eachProduct) => {
+//         return `<div class="card">
+//                     <div class="card-img">
+//                         <img src=${eachProduct.img} alt="product-1" class="img product-pic">
+//                     </div>
 
-                    <div class="card-name">
-                            <h1>${eachProduct.name}</h1>
-                        </div>
-                    <div class="info">
+//                     <div class="card-name">
+//                             <h1>${eachProduct.name}</h1>
+//                         </div>
+//                     <div class="info">
 
-                        <div class="card-age">
-                            <h3>${eachProduct.age}</h3>
-                        </div>
+//                         <div class="card-age">
+//                             <h3>${eachProduct.age}</h3>
+//                         </div>
 
-                        <div class="card-gender">
-                            <h3>${eachProduct.gender}</h3>
-                        </div>
+//                         <div class="card-gender">
+//                             <h3>${eachProduct.gender}</h3>
+//                         </div>
 
-                        <div class="card-breed">
-                            <h3>${eachProduct.breed}</h3>
-                        </div>
+//                         <div class="card-breed">
+//                             <h3>${eachProduct.breed}</h3>
+//                         </div>
 
-                        <a href="#" class="card-dog-link"><h3>More Info</h3></a>
-                    </div>
-                </div>`;
-    });
-    showAllProducts = showAllProducts.join("");
-    fullInventory.innerHTML = showAllProducts;
-});
+//                         <a href="#" class="card-dog-link"><h3>More Info</h3></a>
+//                     </div>
+//                 </div>`;
+//     });
+//     showAllProducts = showAllProducts.join("");
+//     fullInventory.innerHTML = showAllProducts;
+// });
 
 /*
 // SORTING COLORS

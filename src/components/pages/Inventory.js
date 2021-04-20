@@ -1,21 +1,34 @@
 import SearchForm from "../sections/SearchForm";
+import petInventory from "../utilities/petInventory";
+import Inven from "../sections/Inven";
 
 const Inventory = () => {
-    return (
-        <>
-            <main>
-                <SearchForm />
-                <section class="products">
-                    <div class="container">
-                        <div class="section-intro">
-                            <h4>All Pals</h4>
-                        </div>
+    const allPetComponents = petInventory.map((pet) => (
+        <Inven
+            key={pet.id}
+            img={pet.img}
+            name={pet.name}
+            age={pet.age}
+            gender={pet.gender}
+            breed={pet.breed}
+        />
+    ));
 
-                        <div class="inventory full-inventory"></div>
+    return (
+        <main>
+            <SearchForm />
+            <section className="products">
+                <div className="container">
+                    <div className="section-intro">
+                        <h4>All Pals</h4>
                     </div>
-                </section>
-            </main>
-        </>
+
+                    <div className="inventory full-inventory">
+                        {allPetComponents}
+                    </div>
+                </div>
+            </section>
+        </main>
     );
 };
 
