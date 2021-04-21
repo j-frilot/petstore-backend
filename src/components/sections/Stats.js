@@ -1,27 +1,49 @@
+import { useState, useEffect } from "react";
+
 const Stats = () => {
-    let rescueCount = 1;
-    setInterval(() => {
-        if (rescueCount < 342) {
-            rescueCount++;
-            document.querySelector(".rescue-num").innerHTML = rescueCount;
-        }
-    }, 3);
+    const [stats, setStats] = useState({
+        rescue: 0,
+        adopt: 0,
+        volunteer: 0
+    });
 
-    let adoptCount = 1;
-    setInterval(() => {
-        if (adoptCount < 155) {
-            adoptCount++;
-            document.querySelector(".adopt-num").innerHTML = adoptCount;
-        }
-    }, 10);
+    useEffect(() => {
+        setInterval(() => {
+            setStats((prevStats) => {
+                if (prevStats.rescue < 342) {
+                    return {
+                        ...prevStats,
+                        rescue: prevStats.rescue + 1
+                    };
+                }
+                return prevStats;
+            });
+        }, 3);
 
-    let volunteerCount = 1;
-    setInterval(() => {
-        if (volunteerCount < 50) {
-            volunteerCount++;
-            document.querySelector(".volunteer-num").innerHTML = volunteerCount;
-        }
-    }, 50);
+        setInterval(() => {
+            setStats((prevStats) => {
+                if (prevStats.adopt < 155) {
+                    return {
+                        ...prevStats,
+                        adopt: prevStats.adopt + 1
+                    };
+                }
+                return prevStats;
+            });
+        }, 10);
+
+        setInterval(() => {
+            setStats((prevStats) => {
+                if (prevStats.volunteer < 50) {
+                    return {
+                        ...prevStats,
+                        volunteer: prevStats.volunteer + 1
+                    };
+                }
+                return prevStats;
+            });
+        }, 50);
+    }, []);
 
     return (
         <section className="data">
@@ -32,7 +54,8 @@ const Stats = () => {
                     <div className="data-block">
                         <i className="fas fa-dog"></i>
                         <h3>
-                            <span className="rescue-num">0</span> rescued
+                            <span className="rescue-num">{stats.rescue}</span>{" "}
+                            rescued
                         </h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -42,7 +65,8 @@ const Stats = () => {
                     <div className="data-block">
                         <i className="fas fa-heart"></i>
                         <h3>
-                            <span className="adopt-num">0</span> adoptions
+                            <span className="adopt-num">{stats.adopt}</span>{" "}
+                            adoptions
                         </h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing
@@ -52,7 +76,10 @@ const Stats = () => {
                     <div className="data-block">
                         <i className="fas fa-hands-helping"></i>
                         <h3>
-                            <span className="volunteer-num">0</span> volunteers
+                            <span className="volunteer-num">
+                                {stats.volunteer}
+                            </span>{" "}
+                            volunteers
                         </h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing
