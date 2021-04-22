@@ -1,6 +1,8 @@
-const Footer = () => {
-    return (
-        <>
+import React from "react";
+
+class Footer extends React.Component {
+    render() {
+        return (
             <footer className="">
                 <section className="container danger">
                     <div className="content">
@@ -18,8 +20,8 @@ const Footer = () => {
                 </section>
                 <hr />
             </footer>
-        </>
-    );
-};
+        );
+    }
+}
 
 export default Footer;

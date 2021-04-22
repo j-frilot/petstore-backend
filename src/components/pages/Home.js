@@ -2,20 +2,23 @@ import Slider from "../sections/Slider";
 import Stats from "../sections/Stats";
 import homeInventory from "../utilities/homeInventory";
 import Inven from "../sections/Inven";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Home = () => {
-    const homePetComponents = homeInventory.map((pet) => (
-        <Inven
-            key={pet.id}
-            img={pet.img}
-            name={pet.name}
-            age={pet.age}
-            gender={pet.gender}
-            breed={pet.breed}
-        />
-    ));
-    return (
-        <>
+class Home extends React.Component {
+    render() {
+        const homePetComponents = homeInventory.map((pet) => (
+            <Inven
+                key={pet.id}
+                img={pet.img}
+                name={pet.name}
+                age={pet.age}
+                gender={pet.gender}
+                breed={pet.breed}
+            />
+        ));
+
+        return (
             <main>
                 <Slider />
                 <Stats />
@@ -24,10 +27,10 @@ const Home = () => {
                         <div className="section-intro">
                             <h4>Ready For A New Home</h4>
                             <h5 className="red">
-                                <a href="inventory.html">
+                                <Link to="/inventory">
                                     View All Pals{" "}
                                     <i className="fas fa-chevron-right"></i>
-                                </a>
+                                </Link>
                             </h5>
                         </div>
                         <hr />
@@ -38,8 +41,8 @@ const Home = () => {
                     </div>
                 </section>
             </main>
-        </>
-    );
-};
+        );
+    }
+}
 
 export default Home;

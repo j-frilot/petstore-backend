@@ -93,37 +93,3 @@ const Stats = () => {
 };
 
 export default Stats;
-
-// let rescueNum = document.querySelector(".rescue-num");
-// let adoptNum = document.querySelector(".adopt-num");
-// let volunteerNum = document.querySelector(".volunteer-num");
-
-// let rescueCount = 1;
-// setInterval(() => {
-//     if (rescueCount < 342) {
-//         rescueCount++;
-//         let rescueNum = (document.querySelector(
-//             ".rescue-num"
-//         ).innerText = rescueCount);
-//     }
-// }, 3);
-
-// let adoptCount = 1;
-// setInterval(() => {
-//     if (adoptCount < 155) {
-//         adoptCount++;
-//         let adoptNum = (document.querySelector(
-//             ".adopt-num"
-//         ).innerText = adoptCount);
-//     }
-// }, 10);
-
-// let volunteerCount = 1;
-// setInterval(() => {
-//     if (volunteerCount < 50) {
-//         volunteerCount++;
-//         let volunteerNum = (document.querySelector(
-//             ".volunteer-num"
-//         ).innerText = volunteerCount);
-//     }
-// }, 50);

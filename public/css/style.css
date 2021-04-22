@@ -109,7 +109,7 @@ header nav .active {
 .slide-show .first-slide,
 .slide-show .second-slide,
 .slide-show .third-slide {
-    display: none;
+    display: flex;
     text-align: center;
     flex-direction: column;
     align-items: center;
