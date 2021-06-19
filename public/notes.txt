@@ -1,0 +1,4 @@
+    // https://dog.ceo/api/breed/beagle/images
+
+    // https://images.dog.ceo/breeds/beagle/DSC05086.JPG
+    // localhost:4000/api/inventory;

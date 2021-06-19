@@ -1,6 +1,6 @@
 import React from "react";
 
-const Inven = (props) => {
+const PetCard = (props) => {
     return (
         <div className="card">
             <div className="card-img">
@@ -14,7 +14,6 @@ const Inven = (props) => {
             <div className="card-name">
                 <h1>{props.name}</h1>
             </div>
-
             <div className="info">
                 <div className="card-age">
                     <h3>{props.age}</h3>
@@ -36,4 +35,4 @@ const Inven = (props) => {
     );
 };
 
-export default Inven;
+export default PetCard;

@@ -1,10 +1,10 @@
 import SearchForm from "../sections/SearchForm";
 import petInventory from "../utilities/petInventory";
-import Inven from "../sections/Inven";
+import PetCard from "../sections/PetCard";
 
 const Inventory = () => {
     const allPetComponents = petInventory.map((pet) => (
-        <Inven
+        <PetCard
             key={pet.id}
             img={pet.img}
             name={pet.name}
