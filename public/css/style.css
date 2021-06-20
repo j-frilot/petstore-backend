@@ -30,73 +30,11 @@ li {
     list-style: none;
 }
 
-.margin {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
-
-h1,
-h2,
-h3,
-header {
-    font-family: "Lobster", sans-serif;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.8;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-}
-
 h2 {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.btn {
-    background-color: #ff9505;
-    border-radius: 5px;
-    padding: 10px 15px;
-    outline: none;
-    border: none;
-}
-
-.btn:hover {
-    background-color: #000000;
-}
-
-.img {
-    border-radius: 8px;
-}
-.hide {
-    display: none;
-}
 /* --------HOME PAGE--------- */
 
 /* --------SLIDESHOW--------- */
@@ -199,7 +137,7 @@ h2 {
 }
 
 /* ----------FOOTER---------- */
-footer {
+/* footer {
     background-color: #016fb9;
 }
 footer .danger {
@@ -218,7 +156,7 @@ footer .danger h5 {
 }
 footer hr {
     margin-bottom: 10px;
-}
+} */
 
 /* --------ALL PETS---------- */
 .finds {
