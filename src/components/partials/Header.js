@@ -1,73 +1,60 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Image from "react-bootstrap/Image";
 
 class Header extends React.Component {
     render() {
         return (
             <header>
-                <nav className="nav container">
-                    <ul className=" nav-list ">
-                        <li className="nav-Navlink hide-small">
-                            <NavLink to="/" activeClassName="active" exact>
-                                Home
-                            </NavLink>
-                        </li>
-                        <li className="nav-Navlink hide-small">
-                            <NavLink to="/inventory" activeClassName="active">
-                                All Pets
-                            </NavLink>
-                        </li>
-                        <li className="nav-Navlink hide-small">
-                            <NavLink to="/about" activeClassName="active">
-                                About
-                            </NavLink>
-                        </li>
-                        <li className="nav-Navlink hide-small">
-                            <NavLink to="/contact" activeClassName="active">
-                                Contact Us
-                            </NavLink>
-                        </li>
-                    </ul>
-                    <h1 className="nav-logo">
-                        <NavLink to="/" activeClassName="active">
-                            <img
-                                src="images/home/paw-small.png"
-                                alt="paw logo"
-                                className="logo"
-                            />{" "}
-                            Love <span className="accent"></span> Paws Pet Shop{" "}
-                            <span className="accent">React</span> :)
-                        </NavLink>
-                    </h1>
-                </nav>
-                <nav className="container hide-big">
-                    <ul className="nav-list">
-                        <li className="nav-Navlink ">
-                            <NavLink to="/" activeClassName="active">
-                                Home
-                            </NavLink>
-                        </li>
-                        <li className="nav-Navlink">
-                            <NavLink to="/inventory" activeClassName="active">
-                                Products
-                            </NavLink>
-                        </li>
-                    </ul>
-                </nav>
-                <nav className="container hide-big">
-                    <ul className="nav-list">
-                        <li className="nav-Navlink">
-                            <NavLink to="/about" activeClassName="active">
-                                About
-                            </NavLink>
-                        </li>
-                        <li className="nav-Navlink">
-                            <NavLink to="/contact" activeClassName="active">
-                                Contact
-                            </NavLink>
-                        </li>
-                    </ul>
-                </nav>
+                <Navbar collapseOnSelect expand="md" variant="light" bg="dark">
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+                    <Navbar.Brand
+                        href="index.html"
+                        className="d-md-none d-lg-none d-block fs-2 d-flex align-items-center"
+                    >
+                        <h1 className="fw-bold">Love Paws</h1>
+                        <Image
+                            src="images/home/paw-small.png"
+                            alt="paw logo"
+                            className="logo"
+                            fluid
+                        />{" "}
+                    </Navbar.Brand>
+
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav
+                            as="ul"
+                            className="d-flex align-items-center mx-auto"
+                        >
+                            <Nav.Item as="li">
+                                <Link to="/" exact>
+                                    Home
+                                </Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Link to="/inventory">All Pets</Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Link to="/about">About</Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Link to="/contact">Contact Us</Link>
+                            </Nav.Item>
+                            <Nav.Item to="/">
+                                <Image
+                                    src="images/home/paw-small.png"
+                                    alt="paw logo"
+                                    className="logo"
+                                    fluid
+                                />{" "}
+                                Love Paws
+                            </Nav.Item>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
             </header>
         );
     }
