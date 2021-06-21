@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "react-bootstrap/Image";
 
 class About extends React.Component {
     render() {
@@ -6,16 +7,18 @@ class About extends React.Component {
             <main class="about-section">
                 <section>
                     <div class="about-heading">
-                        <img
+                        <Image
                             src="images/home/paw-1.png"
                             alt="paw logo"
                             class="paw-logo-lg"
+                            fluid
                         />
                         <h1>About Love Paws</h1>
-                        <img
+                        <Image
                             src="images/home/paw-1.png"
                             alt="paw logo"
                             class="paw-logo-lg"
+                            fluid
                         />
                     </div>
                 </section>
@@ -45,15 +48,17 @@ class About extends React.Component {
                             </p>
                         </div>
                         <div class="about-content-media">
-                            <img
+                            <Image
                                 src="images/about/about-2.jpg"
                                 alt=""
-                                class="about-img"
+                                class=""
+                                fluid
                             />
-                            <img
+                            <Image
                                 src="images/about/about-2.jpg"
                                 alt=""
-                                class="about-img"
+                                class=""
+                                fluid
                             />
                         </div>
                         <div class="about-content-desc">
@@ -71,15 +76,17 @@ class About extends React.Component {
                             </p>
                         </div>
                         <div class="about-content-media">
-                            <img
+                            <Image
                                 src="images/about/about-2.jpg"
                                 alt=""
-                                class="about-img"
+                                class=""
+                                fluid
                             />
-                            <img
+                            <Image
                                 src="images/about/about-2.jpg"
                                 alt=""
-                                class="about-img"
+                                class=""
+                                fluid
                             />
                         </div>
                     </div>

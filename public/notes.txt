@@ -2,3 +2,6 @@
 
     // https://images.dog.ceo/breeds/beagle/DSC05086.JPG
     // localhost:4000/api/inventory;
+
+        // https://random.dog/doggos
+    // https://api.thedogapi.com/v1/images/search

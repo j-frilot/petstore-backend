@@ -1,4 +1,9 @@
 import { useState, useEffect } from "react";
+import Container from "react-bootstrap/esm/Container";
+import Row from "react-bootstrap/Row";
+
+import { CheckAll, HeartFill, People } from "react-bootstrap-icons";
+import StatBox from "./StatBox";
 
 const Stats = () => {
     const [stats, setStats] = useState({
@@ -46,48 +51,30 @@ const Stats = () => {
     }, []);
 
     return (
-        <section className="data">
-            <div className="container">
-                <h3>Interested In adoption?</h3>
-
-                <div className="data-section">
-                    <div className="data-block">
-                        <i className="fas fa-dog"></i>
-                        <h3>
-                            <span className="rescue-num">{stats.rescue}</span>{" "}
-                            rescued
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.{" "}
-                        </p>
-                    </div>
-                    <div className="data-block">
-                        <i className="fas fa-heart"></i>
-                        <h3>
-                            <span className="adopt-num">{stats.adopt}</span>{" "}
-                            adoptions
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit.
-                        </p>
-                    </div>
-                    <div className="data-block">
-                        <i className="fas fa-hands-helping"></i>
-                        <h3>
-                            <span className="volunteer-num">
-                                {stats.volunteer}
-                            </span>{" "}
-                            volunteers
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.{" "}
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <section className="bg-primary">
+            <Container className="py-3 text-center text-white">
+                <h3 className="fw-bold">Interested In adoption?</h3>
+                <Row>
+                    <StatBox
+                        icon=<CheckAll className="display-1 text-warning" />
+                        stats={stats.rescue}
+                        desc="Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit."
+                    />
+                    <StatBox
+                        icon=<HeartFill className="display-1 text-warning" />
+                        stats={stats.adopt}
+                        desc="Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit."
+                    />
+                    <StatBox
+                        icon=<People className="display-1 text-warning" />
+                        stats={stats.volunteer}
+                        desc="Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit."
+                    />
+                </Row>
+            </Container>
         </section>
     );
 };

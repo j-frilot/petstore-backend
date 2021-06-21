@@ -1,19 +1,8 @@
 import SearchForm from "../sections/SearchForm";
-import petInventory from "../utilities/petInventory";
+// import petInventory from "../utilities/petInventory";
 import PetCard from "../sections/PetCard";
 
 const Inventory = () => {
-    const allPetComponents = petInventory.map((pet) => (
-        <PetCard
-            key={pet.id}
-            img={pet.img}
-            name={pet.name}
-            age={pet.age}
-            gender={pet.gender}
-            breed={pet.breed}
-        />
-    ));
-
     return (
         <main>
             <SearchForm />
@@ -24,7 +13,7 @@ const Inventory = () => {
                     </div>
 
                     <div className="inventory full-inventory">
-                        {allPetComponents}
+                        <PetCard />
                     </div>
                 </div>
             </section>

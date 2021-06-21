@@ -1,37 +1,45 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 
 const PetCard = (props) => {
     return (
-        <div className="card">
-            <div className="card-img">
-                <img
-                    src={props.img}
-                    alt="product-1"
-                    className="img product-pic"
-                />
-            </div>
+        <Card>
+            <Card.Img>
+                <Image src={props.picture} alt="product-1" fluid />
+            </Card.Img>
 
-            <div className="card-name">
-                <h1>{props.name}</h1>
-            </div>
-            <div className="info">
-                <div className="card-age">
-                    <h3>{props.age}</h3>
-                </div>
-
-                <div className="card-gender">
-                    <h3>{props.gender}</h3>
-                </div>
-
-                <div className="card-breed">
-                    <h3>{props.breed}</h3>
-                </div>
-
-                <a href="contact.html" className="card-dog-link">
+            <Card.Body>
+                <Card.Title>
+                    <h1>{props.name}</h1>
+                </Card.Title>
+                <Card.Text>
+                    <Row>
+                        <Col>
+                            <h3>{props.age}</h3>
+                        </Col>
+                        <Col>
+                            <h3>{props.gender}</h3>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <h3>{props.gender}</h3>
+                        </Col>
+                        <Col>
+                            <h3>{props.breed}</h3>
+                        </Col>
+                    </Row>
+                </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+                <a href="/contact">
                     <h3>More Info</h3>
                 </a>
-            </div>
-        </div>
+            </Card.Footer>
+        </Card>
     );
 };
 

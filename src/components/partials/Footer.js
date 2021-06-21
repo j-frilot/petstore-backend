@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Container from "react-bootstrap/Container";
 
 const Footer = () => {
     return (
-        <footer className="bg-info">
-            <section className="container danger">
-                <div className="content">
+        <footer class="bg-primary py-3">
+            <Container className="d-flex align-items-center justify-content-evenly text-white">
+                <div>
                     <h5>Animal In Danger?</h5>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -14,11 +14,10 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <Link to="/contact" className="btn btn-warning">
+                <a href="/contact" className="btn btn-warning">
                     Call Now
-                </Link>
-            </section>
-            <hr />
+                </a>
+            </Container>
         </footer>
     );
 };

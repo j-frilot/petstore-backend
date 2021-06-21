@@ -39,28 +39,41 @@ class Header extends React.Component {
                             className="mx-auto fs-5 fw-bolder align-items-center"
                         >
                             <Nav.Item as="li">
-                                <Link to="/" exact className="px-3">
+                                <Link to="/" exact className="px-3 text-white">
                                     Home
                                 </Link>
                             </Nav.Item>
                             <Nav.Item as="li">
-                                <Link to="/inventory" className="px-3">
+                                <Nav.Link
+                                    as={Link}
+                                    to="/inventory"
+                                    className="px-3 text-white"
+                                >
                                     All Pets
-                                </Link>
+                                </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
-                                <Link to="/about" className="px-3">
+                                <Nav.Link
+                                    as={Link}
+                                    to="/about"
+                                    className="px-3 text-white"
+                                >
                                     About
-                                </Link>
+                                </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
-                                <Link to="/contact" className="px-3">
+                                <Nav.Link
+                                    as={Link}
+                                    to="/contact"
+                                    className="px-3 text-white"
+                                >
                                     Contact Us
-                                </Link>
+                                </Nav.Link>
                             </Nav.Item>
                             <Nav.Item to="/">
-                                <Link
-                                    tp="/"
+                                <Nav.Link
+                                    as={Link}
+                                    to="/"
                                     className="px-3 d-flex align-items-center"
                                 >
                                     <Image
@@ -69,8 +82,10 @@ class Header extends React.Component {
                                         className="pe-3"
                                         fluid
                                     />{" "}
-                                    <h1 className="fw-bold">Love Paws</h1>
-                                </Link>
+                                    <h1 className="fw-bold text-white">
+                                        Love Paws
+                                    </h1>
+                                </Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>

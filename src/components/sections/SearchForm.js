@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "react-bootstrap/Image";
 
 class SearchForm extends React.Component {
     render() {
@@ -14,10 +15,11 @@ class SearchForm extends React.Component {
                 </div>
 
                 <div>
-                    <img
+                    <Image
                         src="images/home/paw-1.png"
                         alt="paw logo"
                         className="paw-logo-lg"
+                        fluid
                     />
                     <h2>Find a pet just for you!</h2>
                 </div>
