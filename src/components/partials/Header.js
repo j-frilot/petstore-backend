@@ -70,7 +70,7 @@ class Header extends React.Component {
                                     Contact Us
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item to="/">
+                            <Nav.Item to="/" className="me-auto">
                                 <Nav.Link
                                     as={Link}
                                     to="/"
