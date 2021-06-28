@@ -11,6 +11,8 @@ CREATE TABLE inventory(
     gender          VARCHAR(10)
 );
 
+-- ADD AGE
+
 INSERT INTO inventory(name, breed, image, gender)
 VALUES  ("ralph",  "beagle", "beagle/n02088364_10296",  "male"),
         ("buster", "beagle", "beagle/n02088364_10206",  "male"),
