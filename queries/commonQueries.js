@@ -2,7 +2,7 @@ const pool = require("../db/dbconfig");
 const inventoryQueries = require("./inventoryQueries");
 
 const commonQueries = {
-    all: (res, table) => {
+    findAll: (res, table) => {
         pool.execute(`SELECT * FROM ${table}`, (error, results) => {
             if (!error) {
                 console.log("Succes Query from 'allQuery'");

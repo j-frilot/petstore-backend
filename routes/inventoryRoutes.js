@@ -4,7 +4,7 @@ const { inventoryQueries: query } = require("../queries/Query");
 
 // inventory    ${port}/api/inventory
 router.get("/", (req, res) => {
-    query.all(res, query.table);
+    query.findAll(res, query.table);
 });
 
 module.exports = router;

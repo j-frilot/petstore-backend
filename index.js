@@ -17,10 +17,17 @@ app.use(express.urlencoded({ extended: false }));
 // parse incoming JSON payloads
 app.use(express.json());
 
+//  FOR LOCAL
 app.use(function (req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "https://localhost:4000");
     next();
 });
+
+//  FOR SERVER
+// app.use(function (req, res, next) {
+//     res.setHeader("Access-Control-Allow-Origin", "https://localhost:4000");
+//     next();
+// });
 
 // Port Environment variable
 const PORT = process.env.PORT || 4000;
