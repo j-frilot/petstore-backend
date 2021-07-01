@@ -7,8 +7,17 @@ import Col from "react-bootstrap/Col";
 const PetSection = (props) => {
     const [dogPic, setDogPic] = useState([]);
 
+    // useEffect(() => {
+    //     fetch("http://localhost:${PORT}/petstore/inventory")
+    //         .then((res) => res.json())
+    //         .then((res) => {
+    //             console.log(res);
+    //             setDogPic(res);
+    //         });
+    // }, []);
+
     useEffect(() => {
-        fetch("http://localhost:4002/petstore/inventory")
+        fetch("https://melloman.live/petstore/inventory")
             .then((res) => res.json())
             .then((res) => {
                 console.log(res);
@@ -17,7 +26,7 @@ const PetSection = (props) => {
     }, []);
 
     return (
-        <Row lg={5} className="p-5">
+        <Row lg={5}>
             {dogPic.map((dog) => (
                 <Col sm={4} key={dog.inventory_id} className="p-3">
                     <PetCard

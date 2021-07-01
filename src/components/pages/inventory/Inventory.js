@@ -6,8 +6,8 @@ const Inventory = () => {
     return (
         <main>
             <SearchForm />
-            <Container>
-                <h3>All Pals</h3>
+            <Container className="p-5">
+                <h3 className="display-4 text-center">All Pals</h3>
 
                 <PetSection />
             </Container>

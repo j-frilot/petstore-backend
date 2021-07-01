@@ -33,7 +33,7 @@ const PetCard = (props) => {
                 rounded
             />
 
-            <div>
+            <div style={{ textTransform: "capitalize" }}>
                 <div>
                     <h3 className="m-0">{props.name}</h3>
                 </div>
