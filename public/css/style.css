@@ -91,7 +91,7 @@ h2 {
 } */
 
 /* --------PRODUCTS---------- */
-.products {
+/* .products {
     padding: 20px 0;
     background-color: #fff;
 }
@@ -111,7 +111,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
+}  */
 /* .products .inventory .card {
     text-align: center;
     margin: 20px;
@@ -159,7 +159,7 @@ footer hr {
 } */
 
 /* --------ALL PETS---------- */
-.finds {
+/* .finds {
     background-color: #016fb9;
 }
 
@@ -183,7 +183,7 @@ footer hr {
 }
 .find h3 {
     font-size: 1.5rem;
-}
+} */
 
 /* --------ABOUT CONTENT---------- */
 .about-section .about-heading {

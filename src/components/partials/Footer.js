@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 
 const Footer = () => {
     return (
-        <footer class="bg-primary py-3">
+        <footer className="bg-primary py-3">
             <Container className="d-flex align-items-center justify-content-evenly text-white">
                 <div>
                     <h5>Animal In Danger?</h5>
