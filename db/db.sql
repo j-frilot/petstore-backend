@@ -2,7 +2,7 @@
 CREATE DATABASE petshop;
 USE petshop;
 
-DROP TABLE inventory;
+-- DROP TABLE inventory;
 CREATE TABLE inventory(
     inventory_id    int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     name            VARCHAR(30),           

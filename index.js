@@ -9,7 +9,7 @@ app.use(helmet());
 app.use(cors());
 app.use(express.static("public"));
 
-app.use("/api", router);
+app.use("/petstore", router);
 
 // parse incoming traditional HTML form submits
 app.use(express.urlencoded({ extended: false }));
@@ -19,18 +19,18 @@ app.use(express.json());
 
 //  FOR LOCAL
 app.use(function (req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "https://localhost:4000");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4002");
     next();
 });
 
 //  FOR SERVER
 // app.use(function (req, res, next) {
-//     res.setHeader("Access-Control-Allow-Origin", "https://localhost:4000");
+//     res.setHeader("Access-Control-Allow-Origin", "https://melloman.live");
 //     next();
 // });
 
 // Port Environment variable
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4002;
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);

@@ -1,18 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4002;
 
 //   FOR LOCAL
 router.get("/", (req, res) => {
     res.json({
-        "All Pets": `http://localhost:${PORT}/api/inventory`
+        "All Pets": `http://localhost:${PORT}/petstore/inventory`
     });
 });
 
 //  FOR SERVER
 // router.get("/", (req, res) => {
 //     res.json({
-//         "All Pets": `http://localhost:${PORT}/api/inventory`
+//         "All Pets": `https://melloman.live/petstore/inventory`
 //     });
 // });
 
