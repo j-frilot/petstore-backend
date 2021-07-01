@@ -8,7 +8,7 @@ const PetSection = (props) => {
     const [dogPic, setDogPic] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/api/inventory")
+        fetch("http://localhost:4002/petstore/inventory")
             .then((res) => res.json())
             .then((res) => {
                 console.log(res);
