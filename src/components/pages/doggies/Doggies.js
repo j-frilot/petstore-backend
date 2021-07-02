@@ -2,7 +2,7 @@ import SearchForm from "./SearchForm";
 import PetSection from "./PetSection";
 import Container from "react-bootstrap/Container";
 
-const Inventory = () => {
+const Doggies = () => {
     return (
         <main>
             <SearchForm />
@@ -15,4 +15,4 @@ const Inventory = () => {
     );
 };
 
-export default Inventory;
+export default Doggies;

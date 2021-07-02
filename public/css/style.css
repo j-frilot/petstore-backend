@@ -166,7 +166,7 @@ footer hr {
 .find {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
     background-color: #016fb9;

@@ -25,7 +25,7 @@ class Header extends React.Component {
                         className="d-md-none d-lg-none d-block fs-2 d-flex align-items-center "
                     >
                         <Image
-                            src="images/home/paw-small.png"
+                            src="https://res.cloudinary.com/dsip2gx3i/image/upload/v1625110225/Love%20Paws/paw-small_wptqjg.png"
                             alt="paw logo"
                             className="pe-3"
                             fluid
@@ -39,14 +39,14 @@ class Header extends React.Component {
                             className="mx-auto fs-5 fw-bolder align-items-center"
                         >
                             <Nav.Item as="li">
-                                <Link to="/" exact className="px-3 text-white">
+                                <Link to="/" className="px-3 text-white">
                                     Home
                                 </Link>
                             </Nav.Item>
                             <Nav.Item as="li">
                                 <Nav.Link
                                     as={Link}
-                                    to="/inventory"
+                                    to="/doggies"
                                     className="px-3 text-white"
                                 >
                                     All Pets
@@ -77,7 +77,7 @@ class Header extends React.Component {
                                     className="px-3 d-flex align-items-center"
                                 >
                                     <Image
-                                        src="images/home/paw-small.png"
+                                        src="https://res.cloudinary.com/dsip2gx3i/image/upload/v1625110225/Love%20Paws/paw-small_wptqjg.png"
                                         alt="paw logo"
                                         className="pe-3"
                                         fluid

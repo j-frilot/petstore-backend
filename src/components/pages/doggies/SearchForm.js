@@ -23,7 +23,7 @@ class SearchForm extends React.Component {
                         </Col>
                         <Col sm={4}>
                             <Image
-                                src="images/home/paw-1.png"
+                                src="https://res.cloudinary.com/dsip2gx3i/image/upload/v1625110225/Love%20Paws/paw-small_wptqjg.png"
                                 alt="paw logo"
                                 className="paw-logo-lg"
                                 fluid

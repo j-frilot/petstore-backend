@@ -17,7 +17,7 @@ const Home = () => {
                 <div className="section-intro p-5">
                     <h3>Ready For A New Home</h3>
                     <h4 className="red">
-                        <Link to="/inventory">
+                        <Link to="/doggies">
                             View All Pals{" "}
                             <i className="fas fa-chevron-right"></i>
                         </Link>

@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
+// import Button from "react-bootstrap/Button";
 
 const PetCard = (props) => {
     const cardStyle = {
@@ -8,17 +10,6 @@ const PetCard = (props) => {
     };
     // https://images.dog.ceo/breeds/beagle/DSC05086.JPG
     // breeds / beagle / DSC05086.JPG;
-
-    /* .products .inventory .card {
-    text-align: center;
-    margin: 20px;
-    max-width: 225px;
-    color: #1a6692;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: -5px 5px 5px rgba(225, 149, 5, 0.7);
-    padding: 5px;
-} */
 
     return (
         <div
@@ -43,9 +34,9 @@ const PetCard = (props) => {
                     <p className="fs-5 m-0">{props.breed}</p>
                 </div>
 
-                <a href="/contact">
+                <Link to={`/doggies/${props.name}`}>
                     <p className="fs-5 m-0">More Info</p>
-                </a>
+                </Link>
             </div>
         </div>
     );

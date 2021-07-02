@@ -1,27 +1,12 @@
 import React from "react";
+import Banner from "../../sections/Banner";
 import Image from "react-bootstrap/Image";
 
 const About = () => {
     return (
         <main className="about-section">
             <section>
-                <div className="about-heading">
-                    <Image
-                        src="images/home/paw-1.png"
-                        alt="paw logo"
-                        className="paw-logo-lg"
-                        fluid
-                    />
-                    <h1>About Love Paws</h1>
-                    <Image
-                        src="images/home/paw-1.png"
-                        alt="paw logo"
-                        className="paw-logo-lg"
-                        fluid
-                    />
-                </div>
-            </section>
-            <section>
+                <Banner heading="About Love Paws" />
                 <div className="about-content">
                     <div className="about-content-desc">
                         <h2>Our mission</h2>
