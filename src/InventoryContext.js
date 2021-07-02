@@ -5,8 +5,19 @@ export const DataContext = createContext();
 const InventoryContext = ({ children }) => {
     const [dogInfo, setDogInfo] = useState([]);
 
+    //   LOCAL
+    // useEffect(() => {
+    //     fetch("http://localhost:4002/petstore/inventory")
+    //         .then((res) => res.json())
+    //         .then((res) => {
+    //             // console.log(res);
+    //             setDogInfo(res);
+    //         });
+    // }, []);
+
+    //  SERVER
     useEffect(() => {
-        fetch("http://localhost:4002/petstore/inventory")
+        fetch("https://melloman.live/petstore/inventory")
             .then((res) => res.json())
             .then((res) => {
                 // console.log(res);
