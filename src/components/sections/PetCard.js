@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
-// import Button from "react-bootstrap/Button";
+import { DataContext } from "../../InventoryContext";
 
 const PetCard = (props) => {
     const cardStyle = {
@@ -10,6 +10,9 @@ const PetCard = (props) => {
     };
     // https://images.dog.ceo/breeds/beagle/DSC05086.JPG
     // breeds / beagle / DSC05086.JPG;
+
+    const dogInfo = useContext(DataContext);
+    console.log(dogInfo);
 
     return (
         <div

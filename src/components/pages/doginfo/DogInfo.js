@@ -2,9 +2,9 @@ import React from "react";
 
 const DogInfo = () => {
     return (
-        <div>
-            <h1>DOG INFO</h1>
-        </div>
+        <>
+            <h1>doginfo</h1>
+        </>
     );
 };
 
