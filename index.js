@@ -12,22 +12,22 @@ app.use(express.static("public"));
 app.use("/petstore", router);
 
 // parse incoming traditional HTML form submits
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 // parse incoming JSON payloads
 app.use(express.json());
 
 //  FOR LOCAL
-app.use(function (req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4002");
-    next();
-});
-
-//  FOR SERVER
 // app.use(function (req, res, next) {
-//     res.setHeader("Access-Control-Allow-Origin", "https://melloman.live");
+//     res.setHeader("Access-Control-Allow-Origin", "http://localhost:4002");
 //     next();
 // });
+
+//  FOR SERVER
+app.use(function (req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "https://melloman.live");
+    next();
+});
 
 // Port Environment variable
 const PORT = process.env.PORT || 4002;
