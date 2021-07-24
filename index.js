@@ -9,7 +9,7 @@ app.use(helmet());
 app.use(cors());
 app.use(express.static("public"));
 
-app.use("/petstore", router);
+app.use("/api", router);
 
 // parse incoming traditional HTML form submits
 app.use(express.urlencoded({ extended: true }));
@@ -17,16 +17,16 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON payloads
 app.use(express.json());
 
-//  FOR LOCAL
-// app.use(function (req, res, next) {
-//     res.setHeader("Access-Control-Allow-Origin", "http://localhost:4002");
-//     next();
-// });
-
-//  FOR SERVER
 app.use(function (req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "https://melloman.live");
+    res.setHeader(
+        "Access-Control-Allow-Origin",
+        "https://petshop-josh.herokuapp.com/"
+    );
     next();
+});
+
+app.get("/", (req, res) => {
+    res.send("<h1> This is for testing purposes only.</h1>");
 });
 
 // Port Environment variable
