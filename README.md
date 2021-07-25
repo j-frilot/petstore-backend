@@ -4,7 +4,7 @@
 
 ## Description
 
-Love Paws is a mock petstore website created using Nodejs, Express, React, and PostgreSQL.
+Love Paws is a mock petstore website created using Nodejs, Express, React, and PostgreSQL. The database is hosted using Heroku and frontend hosted using Netlify.
 
 ![screenshot](https://res.cloudinary.com/dsip2gx3i/image/upload/v1627242665/Love%20Paws/lovepaws-screenshot.png)
 
@@ -24,7 +24,7 @@ Love Paws is a mock petstore website created using Nodejs, Express, React, and P
 
 ## Usage
 
-At least Node v14.6+ is required. For local connection, use /server/db/db.sql to run a sample product database for products. Create .env file with the perspective variables in /ser/db/dbconfig.js. DB_HOST, DB_PASS, DB_NAME, DB_PORT, DB_USER.
+At least Node v14.6+ is required. For local connection, use /server/db/db.sql to run a sample product database for products. Create .env file with the perspective variables in /server/db/dbconfig.js. DB_HOST, DB_PASS, DB_NAME, DB_PORT, DB_USER.
 
 ## Questions
 
