@@ -1,15 +1,27 @@
 const express = require("express");
 const router = express.Router();
-const { inventoryQueries: query } = require("../queries/Query");
+const db = require("../db/dbconfig");
 
-// inventory    ${port}/api/inventory
-router.get("/", (req, res) => {
-    query.findAll(res, query.table);
+// api/inventory  ALL DOGS
+router.get("/", async (req, res) => {
+    try {
+        const findAllDogs = await db.query("SELECT * FROM inventory");
+        res.json(findAllDogs.rows);
+    } catch (err) {
+        console.error(err.message);
+    }
 });
 
 // shows all info based on name    ${port}/api/inventory/[name]
-router.get("/:name", (req, res) => {
-    query.findByName(res, query.table, req.params.name);
-});
+
+// router.get("/", async (req, res) => {
+//     try {
+//         const findByName = await db.query(`SELECT * FROM inventory WHERE name = ?`),
+//             [name];
+//         res.json(findAllDogs.rows);
+//     } catch (err) {
+//         console.error(err.message);
+//     }
+// });
 
 module.exports = router;

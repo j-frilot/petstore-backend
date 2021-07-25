@@ -1,22 +1,17 @@
 require("dotenv").config();
-const mysql = require("mysql2");
+const { Pool } = require("pg");
 
-const pool = mysql.createPool({
+const pool = new Pool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
     connectionLimit: 100
 });
 
-pool.getConnection((err, connection) => {
-    if (err) {
-        console.log("CONNECTION ERROR!! Connection error message: ", err);
-    }
-    console.log(
-        "Oh yea, our connection is established!: ",
-        connection.threadId
-    );
+pool.query("SELECT NOW()", (err, res) => {
+    console.log("Oh yea, our connection is established!: ");
 });
 
 module.exports = pool;
