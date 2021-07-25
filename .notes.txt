@@ -1,0 +1,15 @@
+Heroku CLI  = heroku pg:psql postgresql-fluffy-17492 --app petshop-josh
+
+psql --host=ec2-52-86-25-51.compute-1.amazonaws.com --port=5432 --username=ofayafsrtygurw --password --dbname=d6mrj8380u387o
+
+password : e8d24f16ad7d4c0dd571233564c706cfeb2e06c83f6db4f66a2a9ef0615d9f58
+
+heroku pg:psql --app petshop-josh < db.sql
+
+
+
+
+/PGSSLMODE=/require/
+
+// https://dog.ceo/api/breed/beagle/images
+https://dog.ceo/dog-api/breeds-list
