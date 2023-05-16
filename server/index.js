@@ -1,37 +1,33 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const router = require("./router");
-const helmet = require("helmet");
-const cors = require("cors");
-const path = require("path");
+const router = require('./router');
+const helmet = require('helmet');
+const cors = require('cors');
+const path = require('path');
+const mysql = require('mysql2');
 
 app.use(helmet());
 app.use(cors());
-app.use(express.static("public"));
-
-app.use("/api", router);
+app.use(express.static('public'));
 
 // parse incoming traditional HTML form submits
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 // parse incoming JSON payloads
 app.use(express.json());
 
 app.use(function (req, res, next) {
-    res.setHeader(
-        "Access-Control-Allow-Origin",
-        "https://petshop-josh.herokuapp.com/"
-    );
-    next();
+	res.setHeader('Access-Control-Allow-Origin', `http://localhost:${PORT}`);
+	next();
 });
-
-app.get("/", (req, res) => {
-    res.send("<h1> This is for testing purposes only.</h1>");
+app.use('/api', router);
+app.get('/', (req, res) => {
+	res.send('<h1> This is for testing purposes only.</h1>');
 });
 
 // Port Environment variable
-const PORT = process.env.PORT || 4002;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
+	console.log(`Listening on port ${PORT}`);
 });

@@ -1,11 +1,12 @@
-
+CREATE DATABASE petshop;
 DROP TABLE inventory;
 CREATE TABLE inventory(
-    inventory_id    SMALLSERIAL NOT NULL,
-    name            VARCHAR(30),           
-    breed           VARCHAR(30),
-    image           VARCHAR(80),
-    gender          VARCHAR(10)
+    inventory_id INT NOT NULL AUTO_INCREMENT,
+    name         VARCHAR(30),           
+    breed        VARCHAR(30),
+    image        VARCHAR(80),
+    gender       VARCHAR(10),
+    PRIMARY KEY   (inventory_id)
 );
 
 -- ADD AGE

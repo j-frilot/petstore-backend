@@ -1,17 +1,23 @@
-require("dotenv").config();
-const { Pool } = require("pg");
+// get the client
+const mysql = require('mysql2');
 
-const pool = new Pool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT,
-    connectionLimit: 100
+// create the connection to database
+const connection = mysql.createConnection({
+	host: 'localhost',
+	user: 'josh',
+	database: 'petshop',
+	password: 'PASSWORD',
 });
 
-pool.query("SELECT NOW()", (err, res) => {
-    console.log("Oh yea, our connection is established!: ");
+// simple query
+connection.query('SELECT * FROM `inventory`', function (err) {
+	if (!err) {
+		console.log('The petshop database connection was successful!!');
+	}
+
+	if (err) {
+		console.log('There was an error connecting to petshop database.:', err);
+	}
 });
 
-module.exports = pool;
+module.exports = connection;
